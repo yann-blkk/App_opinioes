@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avalia Apps</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h1>Avaliação de Aplicativos</h1>
+
+    <div class="form">
+        <input type="text" id="appNome" placeholder="Nome do aplicativo">
+        <input type="number" id="nota" placeholder="Nota (0 a 5)" min="0" max="5">
+        <textarea id="comentario" placeholder="Escreva sua avaliação"></textarea>
+        <button onclick="adicionarAvaliacao()">Enviar</button>
+    </div>
+
+    <h2>Lista de Avaliações</h2>
+    <div id="lista"></div>
+
+    <div class="apps">
+
+        <div class="app">
+            <h3>Whatsapp</h3>
+            <p>Média <span id="media1">4.5</span>/5</p>
+        </div>
+
+        <div class="app">
+            <h3>Instagram</h3>
+            <p>Média <span id="media2">4.0</span>/5</p>
+        </div>
+
+        <div class="app">
+            <h3>Uber</h3>
+            <p>Média <span id="media3">3.8</span>/5</p>
+        </div>
+        
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
