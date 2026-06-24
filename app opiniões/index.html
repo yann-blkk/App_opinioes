@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,44 +9,86 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
 </head>
+
 <body>
+
+   
     <div class="header">
-        <img src="../imagens_fi/iconesahur.png" alt="icone" class="logo" height="50px" width="50px">
+        <img src="../imagens_fi/iconesahur.png" alt="icone" class="logo" height="50" width="50">
         <h1>Avaliação de Aplicativos</h1>
     </div>
 
-    <div class="form">
+    
+    <div class="menu">
+        <button onclick="mostrarAba('home')">Avaliações</button>
+        <button onclick="mostrarAba('form')">Avaliar App</button>
+    </div>
+
+   
+    <div id="home" class="aba">
+
+        <h2>Médias dos Aplicativos</h2>
+
+        <div class="apps">
+
+            <div class="app">
+                <h3>WhatsApp</h3>
+                <p>Média: <span id="media1">4.5</span>/5</p>
+                <img src="../imagens_fi/zap.png" alt="WhatsApp" height="50" width="50">
+            </div>
+
+            <div class="app">
+                <h3>Instagram</h3>
+                <p>Média: <span id="media2">4.0</span>/5</p>
+                <img src="../imagens_fi/instagram.png" alt="Instagram" height="50" width="50">
+            </div>
+
+            <div class="app">
+                <h3>Uber</h3>
+                <p>Média: <span id="media3">3.8</span>/5</p>
+                <img src="../imagens_fi/uber.png" alt="Uber" height="50" width="50">
+            </div>
+
+             <div class="app">
+                <h3>99</h3>
+                <p>Média: <span id="media3">4.1</span>/5</p>
+                <img src="../imagens_fi/uber.png" alt="99" height="50" width="50">
+            </div>
+
+             <div class="app">
+                <h3>IFood</h3>
+                <p>Média: <span id="media3">4.5</span>/5</p>
+                <img src="../imagens_fi/uber.png" alt="IFood" height="50" width="50">
+            </div>
+
+             <div class="app">
+                <h3>X</h3>
+                <p>Média: <span id="media3">2.9</span>/5</p>
+                <img src="../imagens_fi/uber.png" alt="X" height="50" width="50">
+            </div>
+
+        </div>
+
+        
+        <div id="lista"></div>
+
+    </div>
+
+    
+    <div id="form" class="aba">
+
+        <h3>Nova Avaliação</h3>
+
         <input type="text" id="appNome" placeholder="Nome do aplicativo">
         <input type="number" id="nota" placeholder="Nota (0 a 5)" min="0" max="5">
         <textarea id="comentario" placeholder="Escreva sua avaliação"></textarea>
+
         <button onclick="adicionarAvaliacao()">Enviar</button>
+
     </div>
 
-    <h2>Lista de Avaliações</h2>
-    <div id="lista"></div>
-
-    <div class="apps">
-
-        <div class="app">
-            <h3>Whatsapp</h3>
-            <p>Média <span id="media1">4.5</span>/5</p>
-            <img src="../imagens_fi/—Pngtree—whatsapp icon vector_8704827.png" alt="zapzap" height="50px" width="50px">
-        </div>
-
-        <div class="app">
-            <h3>Instagram</h3>
-            <p>Média <span id="media2">4.0</span>/5</p>
-            <img src="../imagens_fi/—Pngtree—instagram icon vector_8704817.png" alt="instagram" height="50px" width="50px">
-        </div>
-
-        <div class="app">
-            <h3>Uber</h3>
-            <p>Média <span id="media3">3.8</span>/5</p>
-            <img src="../imagens_fi/uber-icon-removebg-preview.png" alt="uber" height="50px" width="50px">
-        </div>
-        
-    </div>
-
+    
     <script src="script.js"></script>
+
 </body>
 </html>
