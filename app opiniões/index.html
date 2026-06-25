@@ -14,7 +14,7 @@
 
    
     <div class="header">
-        <img src="../imagens_fi/iconesahur.png" alt="icone" class="logo" height="50" width="50">
+        <img src="../imagens_fi/iconesahur.png" alt="icone" class="logo" height="60" width="60">
         <h1>AvaliaApps</h1>
     </div>
 
@@ -31,46 +31,52 @@
 
         <div class="apps">
 
-            <div class="app">
+            <div class="app" onclick="abrirApp('WhatsApp')">
                 <h3>WhatsApp</h3>
                 <p>Média: <span id="media1">4.5</span>/5</p>
                 <img src="../imagens_fi/zap.png" alt="WhatsApp" height="50" width="50">
             </div>
 
-            <div class="app">
+            <div class="app" onclick="abrirApp('Instagram')">
                 <h3>Instagram</h3>
                 <p>Média: <span id="media2">4.0</span>/5</p>
                 <img src="../imagens_fi/instagram.png" alt="Instagram" height="50" width="50">
             </div>
 
-            <div class="app">
+            <div class="app" onclick="abrirApp('Uber')">
                 <h3>Uber</h3>
                 <p>Média: <span id="media3">3.8</span>/5</p>
                 <img src="../imagens_fi/uber.png" alt="Uber" height="50" width="50">
             </div>
 
-             <div class="app">
+             <div class="app" onclick="abrirApp('99')">
                 <h3>99</h3>
-                <p>Média: <span id="media3">4.1</span>/5</p>
+                <p>Média: <span id="media4">4.1</span>/5</p>
                 <img src="../imagens_fi/99.png" alt="99" height="50" width="50">
             </div>
 
-             <div class="app">
+             <div class="app" onclick="abrirApp('IFood')">
                 <h3>IFood</h3>
-                <p>Média: <span id="media3">4.5</span>/5</p>
+                <p>Média: <span id="media5">4.5</span>/5</p>
                 <img src="../imagens_fi/ifood.png" alt="IFood" height="50" width="50">
             </div>
 
-             <div class="app">
+             <div class="app" onclick="abrirApp('X')">
                 <h3>X</h3>
-                <p>Média: <span id="media3">2.9</span>/5</p>
+                <p>Média: <span id="media6">2.9</span>/5</p>
                 <img src="../imagens_fi/X.png" alt="X" height="50" width="50">
             </div>
 
-            <div class="app">
+            <div class="app" onclick="abrirApp('Facebook')">
                 <h3>Facebook</h3>
-                <p>Média: <span id="media3">4.9</span>/5</p>
+                <p>Média: <span id="media7">4.9</span>/5</p>
                 <img src="../imagens_fi/facebook.png" alt="facebook" height="50" width="50">
+            </div>
+
+            <div class="app" onclick="abrirApp('TikTok')">
+                <h3>TikTok</h3>
+                <p>Média: <span id="media8">3.8</span>/5</p>
+                <img src="../imagens_fi/ticoteco.png" alt="TikTok" height="50" width="50">
             </div>
 
 
@@ -81,19 +87,52 @@
 
     </div>
 
+
+    <div id="detalhesApp" class="aba">
+
+    <h2 id="tituloApp"></h2>
+
+    <div id="avaliacoesApp"></div>
+
+    <button onclick="mostrarAba('home')">
+        Voltar
+    </button>
+
+    </div>
+
     
     <div id="form" class="aba">
 
         <h3>Nova Avaliação</h3>
 
-        <input type="text" id="appNome" placeholder="Nome do aplicativo">
-        <input type="number" id="nota" placeholder="Nota (0 a 5)" min="0" max="5">
+        <select id="appNome">
+            <option value="">Selecione um aplicativo</option>
+            <option value="WhatsApp">WhatsApp</option>
+            <option value="Instagram">Instagram</option>
+            <option value="Uber">Uber</option>
+            <option value="99">99</option>
+            <option value="IFood">IFood</option>
+            <option value="X">X</option>
+            <option value="Facebook">Facebook</option>
+            <option value="TikTok">TikTok</option>
+        </select>
+        <div class="rating">
+            <span class="star" onclick="selecionarNota(1)">★</span>
+            <span class="star" onclick="selecionarNota(2)">★</span>
+            <span class="star" onclick="selecionarNota(3)">★</span>
+            <span class="star" onclick="selecionarNota(4)">★</span>
+            <span class="star" onclick="selecionarNota(5)">★</span>
+        </div>
+        <input type="hidden" id="nota" value="0">
         <textarea id="comentario" placeholder="Escreva sua avaliação"></textarea>
 
         <button onclick="adicionarAvaliacao()">Enviar</button>
 
     </div>
 
+    <div id="notificacao" class="notificacao">
+        Avaliação enviada com sucesso! 🎉
+    </div>
     
     <script src="script.js"></script>
 
